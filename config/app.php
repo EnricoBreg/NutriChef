@@ -169,6 +169,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class, // Laravel Permissions by Spatie
+        Yajra\DataTables\DataTablesServiceProvider::class, // Laravel Datatables by Yajra
     ])->toArray(),
 
     /*
