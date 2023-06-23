@@ -11,13 +11,23 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+        <!-- SweetAlert2 CSS -->
         @if(config('app.debug'))
-            <script src="{{ asset("js/resources/jquery-3.7.0/jquery-3.7.0-uncompressed-dev") }}"></script>
+            <link rel="stylesheet" href="{{ asset("resources/sweetalert2/sweetalert2.dev.css") }}">
         @else
-            <script src="{{ asset("js/resources/jquery-3.7.0/jquery-3.7.0.min-prod") }}"></script>
+            <link rel="stylesheet" href="{{ asset("resources/sweetalert2/sweetalert2.min.prod.css") }}">
         @endif
 
         <!-- Scripts -->
+
+        @if(config('app.debug'))
+            <!-- jQuery -->
+            <script src="{{ asset("resources/jquery-3.7.0/jquery-3.7.0-uncompressed-dev.js") }}"></script>
+        @else
+            <!-- jQuery -->
+            <script src="{{ asset("resources/jquery-3.7.0/jquery-3.7.0.min-prod.js") }}"></script>
+        @endif
+
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
