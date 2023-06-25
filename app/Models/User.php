@@ -48,5 +48,6 @@ class User extends Authenticatable
 
     /** @var array The attributes that should be encrypted/decrypted */
     protected $encryptable = [
+        // $email
     ];
 }

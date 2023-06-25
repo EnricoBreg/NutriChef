@@ -170,6 +170,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class, // Laravel Permissions by Spatie
         Yajra\DataTables\DataTablesServiceProvider::class, // Laravel Datatables by Yajra
+        Maatwebsite\Excel\ExcelServiceProvider::class, // laravel-excel
     ])->toArray(),
 
     /*
@@ -185,6 +186,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class, // laravel excel facade
     ])->toArray(),
 
 ];
